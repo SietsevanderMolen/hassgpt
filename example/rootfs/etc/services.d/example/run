@@ -16,4 +16,5 @@ message=$(bashio::config 'message')
 bashio::log.info "${message:="Hello World..."}"
 
 ## Run your program
-exec /usr/bin/my_program
+# replace with uvicorn
+exec uvicorn main:app --app-dir /usr/bin/hassgpt/
