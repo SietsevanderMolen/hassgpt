@@ -8,7 +8,7 @@ RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}" & \
     apk add --no-cache python3 py3-pip &\
-    pip install -r requirements.txt \
+    pip install -r requirements.txt
 
 # Copy root filesystem
 COPY rootfs /
