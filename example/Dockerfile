@@ -11,7 +11,7 @@ RUN \
 
 COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install --ignore-installed -r requirements.txt
 
 # Copy root filesystem
 COPY rootfs /
