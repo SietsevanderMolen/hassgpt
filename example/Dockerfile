@@ -7,8 +7,8 @@ ARG TEMPIO_VERSION BUILD_ARCH
 RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}" & \
-    apk install python3 & \
-    pip install -r requirements.txt
+    apk add --no-cache python3 py3-pip &\
+    pip install -r requirements.txt &\
 
 # Copy root filesystem
 COPY rootfs /
